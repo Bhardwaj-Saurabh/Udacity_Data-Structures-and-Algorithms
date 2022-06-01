@@ -16,6 +16,6 @@ Task3:
 Answer: O(2n log n)
 Analysis: The worst case senerio for task3 is Big o(n) as 2 loop runs n times with sorted method.
 
-Task4:  
+Task3:  
 Answer: O(6n log n)
 Analysis: The worst case senerio for task4 is Big o(n) as 6 loop runs n times with sorted method.

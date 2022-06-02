@@ -20,11 +20,22 @@ Print a message:
 September 2016.".
 """
 
-call_duration = []
+call_duration = {}
 
 for record in calls:
-        call_duration.append(float(record[-1]))
+    if record[0] not in call_duration.keys():
+        call_duration[record[0]] = float(record[-1])
+    else:
+        call_duration[record[0]] += float(record[-1])
 
-caller_index = call_duration.index(max(call_duration))
-print(f"{calls[caller_index][0]} spent the longest time, {calls[caller_index][-1]} \
+
+    if record[1] not in call_duration.keys():
+        call_duration[record[1]] = float(record[-1])
+    else:
+        call_duration[record[1]] += float(record[-1])
+
+
+for key, value in call_duration.items():
+    if value == max(call_duration.values()):
+        print(f"{key} spent the longest time, {value} \
 seconds, on the phone during September 2016.")

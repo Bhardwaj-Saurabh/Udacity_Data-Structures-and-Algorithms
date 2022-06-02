@@ -25,21 +25,21 @@ Print a message:
 The list of numbers should be print out one per line in lexicographic order with no duplicates.
 """
 
-caller_calls = [record[0] for record in calls if record[0][:3] == '140']
-reciever_calls = [record[1] for record in calls]
+caller_calls = set()
+non_tele = set()
 
-called_texts = [record[0] for record in texts]
-receiver_texts = [record[1] for record in texts]
+for call in calls:
+    caller_calls.add(call[0])
+    non_tele.add(call[1])
 
-telemarketers = []
+for num in texts:
+    non_tele.add(num[0])
+    non_tele.add(num[1])
 
-for number in caller_calls:
-    if number not in reciever_calls and number not in called_texts and number not in receiver_texts:
-        telemarketers.append(number)
+telemarketers = caller_calls.difference(non_tele)
 
-telemarketers = sorted(list(set(telemarketers)))
+telemarketers = sorted(set(telemarketers))
 
 print(f"These numbers could be telemarketers:")
 for num in telemarketers:
     print(num)
-

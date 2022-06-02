@@ -2,20 +2,19 @@ Task0:
 Answer: O(1)
 Analysis: The Worst-Case senerio for task0 is always same regardless of number of input as we are only selecting the first and last row of the dataset.
 
-
 Task1:
-Answer: O(2n log n)
-Analysis: The worst case senerio for task1 is Big o(n) as loop runs times twice with sorted method. 
+Answer: O(n)
+Analysis: The worst case senerio for task1 is Big O(n) as 2 loops run n times. 
 in addition, we used len method but that can be ignored compared to for loop. 
 
 Task2:
 Answer: O(n)
-Analysis: The worst case senerio for task2 is Big o(n) as loop runs n times. 
+Analysis: The worst case senerio for task2 is Big o(n) as 2 different loops run n times. 
 
 Task3:  
-Answer: O(2n log n)
-Analysis: The worst case senerio for task3 is Big o(n) as 2 loop runs n times with sorted method.
+Answer: O(n log n)
+Analysis: The worst case senerio for task3 is Big O(n log n) as one loop runs n times with sorted method.
 
-Task3:  
-Answer: O(6n log n)
-Analysis: The worst case senerio for task4 is Big o(n) as 6 loop runs n times with sorted method.
+Task4:  
+Answer: O(n log n)
+Analysis: The worst case senerio for task4 is Big o(n) as 3 loop runs n times with sorted method.

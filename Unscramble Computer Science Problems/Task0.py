@@ -2,6 +2,7 @@
 Read file into texts and calls.
 It's ok if you don't understand how to read files.
 """
+
 import csv
 with open('texts.csv', 'r') as f:
     reader = csv.reader(f)
@@ -25,10 +26,10 @@ ft_oc = texts[0][1]
 ft_time = texts[0][-1]
 
 # Last call records
-lc_ic = calls[0][0]
-lc_oc = calls[0][1]
-lc_time = calls[0][2]
-lc_duration = calls[0][-1]
+lc_ic = calls[-1][0]
+lc_oc = calls[-1][1]
+lc_time = calls[-1][2]
+lc_duration = calls[-1][-1]
 
 print(f"First record of texts, {ft_ic} texts {ft_oc} at time {ft_time}")
 print(f"Last record of calls, {lc_ic} calls {lc_oc} at time {lc_time}, lasting {lc_duration} seconds")

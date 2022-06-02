@@ -56,7 +56,8 @@ for record in calls:
         else:
             area_codes.append(record[1][:3])
 
-list_of_code = set(sorted(area_codes))
+list_of_code = sorted(set(area_codes))
+print(type(list_of_code))
 
 print("The numbers called by people in Bangalore have codes:")
 for code in list_of_code:
